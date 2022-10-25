@@ -1,3 +1,21 @@
+# MTB Topics Articles App
+
+This project is the source code for https://www.articles.mtbtopics.com/ 
+The app is for Mountain Bikers to get cool videos/articles of their favorite sub-topics within MTB eg Jumping, Scenic, Maintenance etc
+After signing up, you pick your favorite topics & a new video/article URL is emailed to you every 24h
+
+## Origins
+
+This project was developed for 2 reasons: -
+- Collaborate on my son's school "Passion Project" (Mountain Biking)
+- Create a 100% serverless app ie using only AWS serverless tech - it uses Amplify, Lambda, SES, DynamoDB, EventBridge, API Gateway
+
+## Dependent Repositories
+
+To complete the picture you also need: -
+* https://github.com/alancam73/mtbtopicsarticles - lambda that generates the SES email to subscribed users
+* https://github.com/alancam73/mtbtopicsload - (optional) - simple python code that loads new articles into the DynamoDB table from a JSON file
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

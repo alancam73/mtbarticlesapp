@@ -1,0 +1,35 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mtbtopics-staging-225134-authRole",
+      "UnauthRoleArn": "arn:aws:iam::007786019690:role/amplify-mtbtopics-staging-225134-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::007786019690:role/amplify-mtbtopics-staging-225134-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-mtbtopics-staging-225134-deployment",
+      "UnauthRoleName": "amplify-mtbtopics-staging-225134-unauthRole",
+      "StackName": "amplify-mtbtopics-staging-225134",
+      "StackId": "arn:aws:cloudformation:us-west-2:007786019690:stack/amplify-mtbtopics-staging-225134/46517180-3b92-11ed-a988-02c83a305675",
+      "AmplifyAppId": "d1wq9awned5e8m"
+    },
+    "categories": {
+      "function": {
+        "mtbTopicsFxn": {
+          "deploymentBucketName": "amplify-mtbtopics-staging-225134-deployment",
+          "s3Key": "amplify-builds/mtbTopicsFxn-5a6d6151417331565344-build.zip"
+        }
+      },
+      "api": {
+        "apiMtbTopics": {}
+      },
+      "auth": {
+        "mtbtopicsbc8f4985": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1wq9awned5e8m",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

@@ -19,10 +19,9 @@ import mtbBackground from './kaos-mtb-background.jpg';
 import mtbAppIcon from './mtb-header-logo-300x50.jpg';
 import mtbUserIcon from './helmet-user-50x60.jpg';
 
-// API Gateway settings - API and paths
+
 const myAPI="apiMtbTopics"         // API Gateway topics API
 const path="/topics"               // path to our bitMask of topics selected
-const unsubPath="/unsubscribe"     // path to the Unsubscribe API action
 
 
 
@@ -64,46 +63,9 @@ function App() {
     const data = await API.get(myAPI, path + "/" + topicsBitMask, requestInfo)
     console.log( {data} )
     
-    var txt = "Thank you " + mtbUser.username + " for selecting MTB topics!\nYou will receive a cool video link every day via email based on your preferences!"
+    var txt = "Thank you " + mtbUser.username + " for selecting MTB topics!\nYou will receive a cool video link every day based on your preferences!"
     alert(txt)
   }
-  
-  // event handler for button click event
-  // we need an Authenticated user for this action
-  const unsubscribeUser = async event => {
-
-    const mtbUser = await Auth.currentAuthenticatedUser()
-    console.log( {user} )
-    console.log( {mtbUser} )
-    const token = mtbUser.signInUserSession.idToken.jwtToken
-    console.log( {token} )
-    
-    const requestInfo = {
-      headers: {
-        Authorization: token
-      }
-    }
-    
-    const data = await API.get(myAPI, unsubPath, requestInfo)
-    console.log( {data} )
-    
-    signOutUser()
-    
-    var txt = "Good bye " + mtbUser.username + " - thanks for using MTB topics!"
-    alert(txt)
-  }
-  
-  // event handler for signing out the current user
-  async function signOutUser() {
-    try {
-        await Auth.signOut({ global: true });     // global signs out from all user devices
-        console.log('User after signOut:' , user )
-        console.log("signing out...")
-    } catch (error) {
-        console.log('error signing out: ', error);
-    }
-  }
-  
   
   // override default props of the MtbNavBar component
   const navBarOverrides = {
@@ -114,10 +76,7 @@ function App() {
       src: mtbUserIcon
     },
     "SignOutButton": {    // use signOut property to signout an authenticated user
-      onClick: signOutUser
-    },
-    "UnsubscribeButton": {    // Unsubscribe - trigger deletion of userId
-      onClick: unsubscribeUser
+      onClick: signOut
     }
   }
   

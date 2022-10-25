@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/topics/{bitmask}": {
+      "name": "/topics/{bitmask}",
+      "lambdaFunction": "mtbTopicsFxn",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/unsubscribe": {
+      "name": "/unsubscribe",
+      "lambdaFunction": "mtbTopicsFxn",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

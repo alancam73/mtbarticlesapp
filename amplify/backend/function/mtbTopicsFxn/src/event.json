@@ -1,0 +1,10 @@
+{
+  "path": "/staging/topics",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "*/*"
+  },
+  "pathParameters": {
+      "bitmask": "3"
+  }
+}
